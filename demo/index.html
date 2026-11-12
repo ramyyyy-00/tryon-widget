@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Try-on widget demo</title>
+<style>
+  body{margin:0;font-family:system-ui,sans-serif;background:#f4f6f8;color:#111}
+  header{padding:24px 16px;text-align:center}
+  h1{margin:0;font-size:28px}
+  p.note{max-width:640px;margin:8px auto 0;color:#555;padding:0 16px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:900px;margin:24px auto;padding:0 16px}
+  .card{background:#fff;border:2px solid #111;border-radius:8px;padding:16px;text-align:center}
+  .card img{width:100%;height:auto;display:block}
+  .card h2{font-size:18px;margin:12px 0 4px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Demo store</h1>
+  <p class="note">This is a fake store page. The button under each product is added by the widget script below. Replace the placeholder images with real, clean photos of the garment (garment alone, plain background).</p>
+</header>
+
+<div class="grid">
+  <!-- Each product just needs data-tryon-image (and optionally a name / prompt). -->
+  <div class="card" data-tryon-image="tee-blue.png" data-tryon-name="a dark blue striped t-shirt">
+    <img src="tee-blue.png" alt="Dark blue striped t-shirt">
+    <h2>Dark blue striped tee</h2>
+  </div>
+  <div class="card" data-tryon-image="tee-lightblue.png" data-tryon-name="a light blue striped t-shirt">
+    <img src="tee-lightblue.png" alt="Light blue striped t-shirt">
+    <h2>Light blue striped tee</h2>
+  </div>
+</div>
+
+<!-- This ONE line is what a brand pastes into its website. data-lang can be "en" or "ar". -->
+<script type="module" src="/widget/tryon-widget.js" data-brand="demo" data-lang="en"></script>
+</body>
+</html>

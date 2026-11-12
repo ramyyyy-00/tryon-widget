@@ -1,0 +1,7 @@
+{
+  "demo": {
+    "name": "Demo store",
+    "origins": ["http://localhost:3000"],
+    "monthlySessionLimit": 200
+  }
+}
